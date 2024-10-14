@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pong.css">
+    <title>Pong</title>
+</head>
+
+<body style="display: flex; place-content: center;">
+
+    
+    <div id="sluttSkjerm" style=" visibility: hidden; ">
+        <div style="font-size: 30px; margin: 1%;">
+            <p id="sluttTekst" style="text-align: center;">Du tapte!</p>
+            <div id="sluttButtons">
+                <button id="provIgjen">Neste Runde</button>
+                <button id="meny">Gå til Meny</button>
+            </div>
+        </div>
+    </div>
+
+    <canvas id="canvas" width="1000" height="800"></canvas>
+    
+    <div id="startSkjerm" style="visibility: visible; ">
+        <div id="startTekst" style="text-align: center;">
+            <h1>Pong</h1>
+            <div style="position: absolute; top: 10%; left: 10%; border: 1px solid white; padding: 20px; border-radius: 5px;">
+                <p id="highscore">Høyeste Winning-Streak: 0🔥</p>
+                <button id="resetHighscore" style="padding: 5% 30%; border-radius: 10px;"><b>Reset Highscore</b></button>
+            </div>
+            <div id="spillere">
+                <label for="player">1 Player<input id="player1" type="radio" checked name="player"></label>
+                <label for="player">2 Player<input id="player2" type="radio" name="player"></label> <br> <br>
+            </div>
+            <div id="modes">
+                <label for="mode">Lett<input type="radio" id="lett" checked name="mode"></label>
+                <label for="mode">Vanskelig<input type="radio" id="vanskelig" name="mode"></label>
+                <label for="mode">Umulig<input type="radio" id="umulig" name="mode"></label>
+            </div>
+            <p style="display: flex; place-content: center; place-items: center; font-size: 20px;">Trykk  <img src="spacebarWhite.png" width="85px" style="margin: 10px;" alt="">  for å starte spillet</p>
+        </div>
+    </div>
+
+</body>
+
+<script src="pong.js"></script>
+</html>

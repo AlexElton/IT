@@ -1,0 +1,23 @@
+#sluttSkjerm, #startSkjerm {
+    position: absolute; 
+    display: flex; 
+    place-content: center; 
+    place-items: center; 
+    background-color: rgba(0, 0, 0, .9); 
+    color: white; 
+    height: 800px; 
+    width: 1000px; 
+}
+
+#sluttSkjerm button {
+    border-radius: 8px;
+    width: 150px;
+    padding: 5%;
+    font-weight: bold;
+}
+
+#canvas {
+    position: absolute; 
+    visibility: visible; 
+    box-shadow: 10px 10px 20px black;
+}
