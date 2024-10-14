@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+/* Home page (index.html) */
+
+.page {
+    width: 100%;
+    height: 100%;
+   
+}
+
+/* Header */
+
+
+
+.head ul{
+    display: inline-flex;
+    background-color: #ffffff;
+    width: 100%;
+    list-style: none;
+}
+
+
+.link {
+    display: inline-flex;
+    margin-top: 1.75%;
+    float: left;
+    /*     margin: 20px;
+    padding: 20px;
+    mellomrom mellom kanpper */
+}
+
+a {
+    margin: 0.75%;
+    padding: 0.5%;
+    white-space: nowrap;
+    
+}
+
+.logoIcon img {
+    width: 93px;
+    margin: 5px;
+    margin-top: 8px;
+    margin-right: 20px;
+    margin-left: 23px;
+    float: left;
+    border: 2px solid #e66767;
+    border-radius: 6px;
+}
+
+.head ul li {
+    position: relative;
+    cursor: pointer;
+
+}
+
+
+.head ul a li{
+    color: rgb(0,0,0);
+    font-size: 24px;
+    text-decoration: none;
+    font-family: monospace;
+    padding: 33px;
+    margin-top: -15px;
+    margin-bottom: 10px;
+}
+
+.head a .login {
+    margin-left: 170px;
+    margin-right: -30px;
+}
+
+.infoLi, .artister, .prog, .kontakt, .login {
+    display: inline-block;
+    color: #e66767;
+    border: 2px solid #e66767;
+    border-radius: 6px;
+    margin-left: 10px;
+}
+
+.infoLi:hover, .artister:hover, .prog:hover, .kontakt:hover, .login:hover {
+    background: #e66767;
+    color: #f2f2f2;
+    transition: 0.5s;
+} 
+
+.info {
+    color: #e66767;
+    text-shadow: 2px 2px black;
+    width: 50%;
+}
+
+
+/* Hovedside */
+
+.introPic {
+    width: 100%;
+    height: 100%;
+    background-image: url(../Bilder/scene.jpg);
+    background-size: cover;
+    position: absolute;
+    background-attachment: fixed;
+    float: left;
+}
+
+.space {
+    height: 1000px;
+    width: 100%;
+    position: relative;
+}
+
+.text-artister {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color:#ffffff;
+    height: auto;
+    width: 100%;
+    line-height: 40px;
+    text-align: center;
+    position: relative;
+    margin-top: -10%;
+}
+
+h2 {
+    margin: 2%;
+    margin-bottom: 4%;
+}
+
+.drake {
+    width: 100%;
+    height: 100%;
+    background-image: url(../Bilder/drake.jpg) ;
+    background-size: cover;
+    position: absolute;
+    background-attachment: fixed;
+    float: left;
+}
+
+.baby {
+    width: 100%;
+    height: 100%;
+    background-image: url(../Bilder/dababy.jpeg);
+    background-size: cover;
+    position: absolute;
+    background-attachment: fixed;
+    float: left;
+}
+
+.travis {
+    width: 100%;
+    height: 100%;
+    background-image: url(../Bilder/travis.jpg);
+    background-size: cover;
+    position: absolute;
+    background-attachment: fixed;
+    float: left;
+}
+
+.billie {
+    width: 100%;
+    height: 100%;
+    background-image: url(../Bilder/billie.jpg);
+    background-size: cover;
+    position: absolute;
+    background-attachment: fixed;
+    float: left;
+}
+
+.tjay {
+    width: 100%;
+    height: 100%;
+    background-image: url(../Bilder/tjay.jpg);
+    background-size: cover;
+    position: absolute;
+    background-attachment: fixed;
+    float: left;
+}
+
+.burna {
+    width: 100%;
+    height: 100%;
+    background-image: url(../Bilder/burnaboy.jpg);
+    background-size: cover;
+    position: absolute;
+    background-attachment: fixed;
+    float: left;
+}

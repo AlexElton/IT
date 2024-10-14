@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="../Bilder/gaast.png">
+</head>
+<body>
+    
+    <div class="page">
+                            <!-- Header, felles for alle sidene -->
+        <div class="head">
+            
+            <ul>
+                <li><div class="logoIcon"><a href="../Home/home.html"><img src="../Bilder/gaast.png" alt="gææst logo"></a></div></li>
+                <div class="link">
+                    <a href="../Info/info.html"><li class="infoLi">INFORMASJON</li></a>
+                    <a href="../Artister/artister.html"><li class="artister">ARTISTER</li></a>
+                    <a href="../Program/program.html"> <li class="prog">PROGRAM</li></a>
+                    <a href="login.html"><li class="login">LOGIN</li></a>
+                    <a href="mailto:alexao2507@osloskolen.no"><li class="kontakt">KONTAKT OSS</li></a>
+                </div>  
+            </ul>
+      
+        </div>
+
+                            <!-- Informasjon / Hoveddelen -->   
+
+<!-- logg inn & registrerings boksen -->
+
+        <div class="login-box">
+            <div class="login-registrer-knapp">
+                <div id="knapp"></div>
+                <button type="button" class="toggle-knapp" onclick="login()">Login</button>
+                <button type="button" class="toggle-knapp" onclick="register()">Registrer</button>
+            </div>
+
+<!-- Ikoner til sosiale medier -->
+            <div class="sosial-ikon">
+                <a href="https://www.facebook.com/profile.php?id=100008455994928" target="null"><img src="../Bilder/fb.png" alt="facebook"></a>
+                <a href="https://www.instagram.com/alexander_2507/" target="null"><img src="../Bilder/gp.png" alt="google"></a>
+                <a href=""><img src="../Bilder/tw.png" alt="twitter"></a>
+            </div>
+
+<!-- Logg inn -->
+            <form id="login" class="input-gruppe">
+                <input type="text" class="input-omrode" placeholder="Brukernavn" required> 
+                <input type="text" class="input-omrode" placeholder="Passord" required>
+                <input type="checkbox" class="check-box"> <span>Husk Passord</span>
+                <button type="submit" class="submit-knapp">Logg Inn</button>
+            </form>
+
+<!-- Registrer -->
+            <form id="register" class="input-gruppe">
+                <input type="text" class="input-omrode" placeholder="Brukernavn" required>
+                <input type="email" class="input-omrode" placeholder="Email" required>
+                <input type="text" class="input-omrode" placeholder="Passord" required>
+                <input type="checkbox" class="check-box"> <span>Jeg er enig med betingelsene og vilkårene</span>
+                <button type="submit" class="submit-knapp">Register</button>
+            </form>
+        </div>
+    </div>
+
+<!-- For å ha animasjoner og interaktive sider -->
+
+    <script>
+        var x = document.getElementById("login");
+        var y = document.getElementById("register");
+        var z = document.getElementById("knapp");
+
+        function register(){
+            x.style.left = "-400px"
+            y.style.left = "50px"
+            z.style.left = "110px"
+        }
+
+        function login(){
+            x.style.left = "50px"
+            y.style.left = "450px"
+            z.style.left = "0px"
+        }
+
+    </script>
+                            
+    </div>
+
+</body>
+</html>
