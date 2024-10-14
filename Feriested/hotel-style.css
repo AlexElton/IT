@@ -1,0 +1,323 @@
+                                        /*  CSS for hele nettsiden */
+
+*{
+    margin:0;
+    padding: 0;
+    font-family: serif, Arial, Helvetica, ;
+  }
+
+#grid-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+      "header"
+      "intro "
+      "natting";
+    background-size: cover;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(Bilder/Los-Angeles-Hotel-Background.jpg);
+    background-attachment: fixed;
+    background-position: center;
+}
+
+                                                /* CSS for header */ 
+
+.header {
+    grid-area: header;
+    background-position: center;
+    display: grid;
+    grid-template-columns: 25% 75%;
+    grid-template-areas:
+      "logo meny";
+    
+}
+
+.logo {
+    grid-area: logo;
+    display: grid;
+    grid-template-columns: 75% 25%;
+    grid-template-areas:
+      "bilde knapp";
+}
+
+#logo-bilde{
+    grid-area: bilde;
+}
+
+#meny-knapp{
+    width: 50px;
+    height: 50px;
+    grid-area: knapp;
+    display: none;
+    margin: 25% 0 50% 0;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden; 
+}
+#meny-x{
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    position: absolute;
+    top: 4%;
+    left: 77.5%;
+    font-size: 35px;
+    color: white;
+    display: none
+}
+
+
+#meny {
+    width: 100%;
+    margin-top: 4.5vw;
+    grid-area: meny;
+}
+
+#meny ul{
+    width: 80%;
+    list-style-type: none; 
+    text-align: right;
+}
+  
+     
+#meny ul li{
+    display: inline-block;
+    margin-top: 25px;
+    padding: 5px;
+
+    
+}
+  
+
+#meny ul li a{
+    text-decoration: none;
+     color: white;
+     padding: 5px 15px;
+     text-transform: uppercase;
+     font-family: 'Staatliches', cursive, sans-serif;
+     letter-spacing: 2.5px;
+}
+
+                                               /* CSS for hoveddel */
+
+#hotell-bilder {
+    margin-top: 150px;
+    margin-bottom: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.bilder {
+    margin: 20px;
+    max-width: 100%;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.75);
+    max-width: 70%;
+}
+
+.item {
+    text-align: center;
+    color: white;
+    max-width: 50%;
+} 
+
+.caption {
+    display: block;
+    font-family: 'Staatliches', cursive, sans-serif;
+    letter-spacing: 2.5px;
+}
+
+#hotell-header {
+    margin: 75px 50px 0px 50px;
+    color: white;
+    text-align: center;
+}
+#hotell-header h1{
+    padding: 50px;
+}
+#hotell-header p{
+    text-transform: uppercase;
+    line-height: 25px;
+}
+
+                                            /* CSS for footer */
+
+*,*:before,*:after {
+    box-sizing: border-box;
+}
+
+footer {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 50px;
+    color: #fff;
+    background-color: #011c39;
+}
+
+.footer {
+    flex: 1 100%;
+}
+
+#flex-left {
+    margin-right: 1.25em;
+    margin-bottom: 2em;
+}
+
+#flex-left img{
+    width: 50%;
+}
+
+footer h2 {
+    font-weight: 600;
+    font-size: 17px;
+}
+
+#footer ul {
+    list-style: none;
+    
+}
+
+#footer li {
+    line-height: 2em;
+}
+
+#footer a {
+    text-decoration: none;
+}
+
+#footer-right {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+#footer-right > *{
+    flex: 1 50%;
+    margin-right: 1.25em;
+}
+
+#box a {
+    color: #999999;
+}
+
+.footer-bottom {
+    text-align: center;
+    color: #999999;
+    padding-top: 50px;
+}
+
+#footer-left p{
+    padding-right: 20%;
+    color: #999999;
+}
+
+
+                                        /* CSS for å gjøre nettsiden responsive */
+
+@media screen and (min-width: 800px){
+    #footer-right > *{
+        flex: 1;
+    }
+    #footer-left{
+        flex: 1 0px;
+    }
+    #footer-right{
+        flex: 2 0px;
+    }
+    
+}
+
+
+@media only screen and (min-width: 2000px) {
+    #hotell-header h1{
+        font-size: 55px;
+        padding: 75px;
+    }
+
+    #hotell-header p{
+        font-size: 30px;
+        line-height: 35px;
+        padding: 30px;
+    }
+}
+
+@media only screen and (max-width: 1200px){
+    .grid-container {
+        grid-template-areas:
+        'header'
+        'into'
+        'fun';
+    }
+    .header {
+        background-position: center;
+        display: grid;
+        grid-template-areas:
+          'logo'
+          'meny';
+        grid-template-columns: 2fr;
+    }
+    #meny{
+        margin-top: 0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        float: none;
+        display: none;
+        background-color: black;
+        position: fixed;
+
+    }
+    #meny-knapp{
+        grid-area: knapp;
+        display: grid;
+    }
+
+    #meny ul li{
+        display: block;
+        margin-top: 25px;
+        padding: 5px;
+    }
+    #meny ul{
+        text-align: left;
+    }
+
+    .bilder {
+        max-width: 70%;
+    }
+    #hotell-header {
+        margin: 25px 15px 0px 15px;
+
+    }
+
+}
+
+@media only screen and (max-width: 800px) {
+    .item {
+        max-width: 100%;
+    }
+}
+
+
+@media only screen and (max-width: 400px) {
+    #hotell-header h1 {
+        font-size: 25px;
+    }
+    #hotell-header p {
+        font-size: 10px;
+    }
+}
+

@@ -1,0 +1,408 @@
+                                       /* CSS for hele nettside */
+
+*{
+    margin:0;
+    padding: 0;
+    font-family: serif, Arial, Helvetica;
+  }
+
+#grid-container{
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 6fr 1fr ;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+      "header header header"
+      'text text text';
+    background-size: cover;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(Bilder/restautante-bilde.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    
+    height: 1000px;
+}
+
+                                        /* CSS for header */
+
+.header {
+    grid-area: header;
+    background-position: center;
+    display: grid;
+    grid-template-columns: 25% 75%;
+    grid-template-areas:
+      "logo meny";
+    
+}
+
+.logo {
+    grid-area: logo;
+    display: grid;
+    grid-template-columns: 75% 25%;
+    grid-template-areas:
+      "bilde knapp";
+}
+#logo-bilde{
+    grid-area: bilde;
+}
+
+#meny-knapp{
+    width: 50px;
+    height: 50px;
+    grid-area: knapp;
+    display: none;
+    margin: 25% 0 50% 0;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden; 
+}
+#meny-x{
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    position: absolute;
+    top: 4%;
+    left: 77.5%;
+    font-size: 35px;
+    color: white;
+    display: none
+}
+
+
+
+
+
+#meny {
+    width: 100%;
+    margin-top: 4.5vw;
+    grid-area: meny;
+}
+
+#meny ul{
+    width: 80%;
+    list-style-type: none; 
+    text-align: right;
+}
+  
+     
+#meny ul li{
+    display: inline-block;
+    margin-top: 25px;
+    padding: 5px;
+}
+  
+
+#meny ul li a{
+    text-decoration: none;
+     color: white;
+     padding: 5px 15px;
+     border: 2px solid solid;
+     transition: 0.6s ease;
+     text-transform: uppercase;
+     font-family: 'Staatliches', cursive, sans-serif;
+     letter-spacing: 2.5px;
+}
+
+
+
+                                                /* CSS for hoveddel */
+
+.informasjon {
+    grid-area: text;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      " info-header "
+      " res-1 "
+      " bilde1 "
+      " res-2 "
+      " bilde2 "
+      " res-3 "
+      " bilde3 "
+      " res-4 "
+      " bilde4 ";
+
+
+}
+
+#info-header {
+    grid-area: info-header;
+    text-align: center;
+    color: white;
+    font-size: 2vw;
+    margin-bottom: 400px;
+    margin-top: 300px;
+}
+
+#resturant-1 {
+    width: 100%;
+    background-color: white;
+    text-align: center;
+    grid-area: res-1;
+}
+#resturant-2 {
+    width: 100%;
+    background-color: white;
+    text-align: center;
+    grid-area: res-2;
+}
+#resturant-3 {
+    width: 100%;
+    background-color: white;
+    text-align: center;
+    grid-area: res-3;
+}
+#resturant-4 {
+    width: 100%;
+    background-color: white;
+    text-align: center;
+    grid-area: res-4;
+}
+
+#resturant-1 h1, #resturant-2 h1, #resturant-3 h1, #resturant-4 h1{
+    padding: 50px;
+    font-size: 2vw;
+    text-transform: uppercase;
+}
+#resturant-1 p, #resturant-2 p, #resturant-3 p, #resturant-4 p{
+    padding: 50px;
+    font-size: 1vw;
+    text-transform: uppercase;
+    line-height: 3vw;
+}
+
+#bilde1 {
+    grid-area: bilde1;
+    background-image: url(Bilder/thepalm.jpg);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 500px;
+    background-size: contain;
+    background-position: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+#bilde2 {
+    grid-area: bilde2;
+    background-image: url(Bilder/Bestia.jpg);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 500px;
+    background-size: contain;
+    background-position: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+#bilde3 {
+    grid-area: bilde3;
+    background-image: url(Bilder/republique.jpg);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 500px;
+    background-size: contain;
+    background-position: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+#bilde4 {
+    grid-area: bilde4;
+    background-image: url(Bilder/Redbird.jpg);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 500px;
+    background-size: contain;
+    background-position: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+}
+
+#bilde1, #bilde2, #bilde3, #bilde4 {
+    margin-bottom: 200px;
+} 
+
+                                            /* CSS for footer */
+
+*,*:before,*:after {
+    box-sizing: border-box;
+}
+
+footer {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 50px;
+    color: #fff;
+    background-color: #011c39;
+}
+
+.footer {
+    flex: 1 100%;
+}
+
+#flex-left {
+    margin-right: 1.25em;
+    margin-bottom: 2em;
+}
+
+#flex-left img{
+    width: 50%;
+}
+
+footer h2 {
+    font-weight: 600;
+    font-size: 17px;
+}
+
+#footer ul {
+    list-style: none;
+    
+}
+
+#footer li {
+    line-height: 2em;
+}
+
+#footer a {
+    text-decoration: none;
+}
+
+#footer-right {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+#footer-right > *{
+    flex: 1 50%;
+    margin-right: 1.25em;
+}
+
+#box a {
+    color: #999999;
+}
+
+.footer-bottom {
+    text-align: center;
+    color: #999999;
+    padding-top: 50px;
+}
+
+#footer-left p{
+    padding-right: 20%;
+    color: #999999;
+}
+
+                                        /* CSS for responsive nettside */
+
+@media screen and (min-width: 600px){
+    #footer-right > *{
+        flex: 1;
+    }
+    #footer-left{
+        flex: 1 0px;
+    }
+    #footer-right{
+        flex: 2 0px;
+    }
+    
+}
+
+
+
+@media only screen and (max-width: 1200px){
+    .grid-container {
+        grid-template-areas:
+        'header'
+        'text';
+    }
+    .header {
+        background-position: center;
+        display: grid;
+        grid-template-areas:
+          'logo'
+          'meny';
+        grid-template-columns: 2fr;
+    }
+    #meny{
+        margin-top: 0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        float: none;
+        display: none;
+        background-color: black;
+        position: fixed;
+    }
+
+    #meny-knapp{
+        grid-area: knapp;
+        display: grid;
+    }
+
+    #meny ul li{
+        display: block;
+        margin-top: 25px;
+        padding: 5px;
+    }
+    #meny ul{
+        text-align: left;
+    }
+
+    #bilde1, #bilde2, #bilde3, #bilde4 {
+        max-width: 75%;
+        height: 300px;
+        background-position: center;
+        margin-bottom: 50px;
+    } 
+
+    #resturant-1 h1, #resturant-2 h1, #resturant-3 h1, #resturant-4 h1{
+        padding: 25px;
+        font-size: 20px;
+    }
+    #resturant-1 p, #resturant-2 p, #resturant-3 p, #resturant-4 p{
+        padding: 50px;
+        font-size: 15px;
+        line-height: 4vw;
+    }
+
+}
+
+@media only screen and (max-width: 900px){
+    #info-header {
+        font-size: 3vw;
+    }
+}
+
+@media only screen and (max-width: 400px){
+    #resturant-1 p, #resturant-2 p, #resturant-3 p, #resturant-4 p{
+        padding-bottom: 20px;
+    }
+}
+
+@media only screen and (max-width: 375px){
+    #info-header {
+        font-size: 4vw;
+    }
+
+    #resturant-1 p, #resturant-2 p, #resturant-3 p, #resturant-4 p{
+        font-size: 12px;
+        line-height: 20px;
+    }
+}
+
+@media only screen and (max-width: 350px){
+    #resturant-1 p, #resturant-2 p, #resturant-3 p, #resturant-4 p{
+        font-size: 10px;
+        line-height: 20px;
+    }
+}

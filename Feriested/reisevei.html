@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reisevei</title>
+    <link rel="stylesheet" href="reisevei-style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Staatliches&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="grid-container">
+        
+        <div class="header">
+            <div class="logo">
+                <button id='meny-knapp' onclick="show()"><img src="Bilder/streker.png" alt="" width="50px"></button>
+                <img src="Bilder/logo2.png" alt="" id='logo-bilde'>
+            </div>
+            <div id="meny">
+                <ul>
+                    <button id='meny-x' onclick="hide()">X</button>
+                    <li class="active"><a href="index.html">Los Angeles</a></li>
+                    <li><a href="hotel.html">Hotell</a></li>
+                    <li><a href="resturanter.html">Restauranter</a></li>
+                    <li><a href="reisevei.html">Reisevei</a></li>
+                    <li><a href="login.html">Login</a></li>
+                
+                </ul>
+            </div>
+
+            </div>
+            <div class="informasjon">
+                <h1>REISEVEI</h1>
+                <p>Fly er den mest effektive måten man kan komme seg til Los Angeles. De fleste land i verden tilbyr enten direkte eller mellom-landing fly. Det finnes en rekke med flyselvskaper som alle tilbyr varierende priser. Om man føler for å spoile seg litt kan man kjøpre første-klasse billetter, hvor man kan oppleve den behagligste flyturen i sitt liv. Gratis drikke og mat, med de store sitteplasser og uendelig beinrom. Hvis du bor over-havs så er fly mest sannsynlig den eneste måten du kan komme deg til Los Angeles.</p>
+                <img class="reise-bilde" src="Bilder/plane.jpg" alt="">
+                <p>Ferje og båt er, fra noen nærmeliggende land, en veldig fin måte å besøke eventyret som venter i Los Angeles. Dette er en litt mindre effektiv måte å reise, men er mer enn nok verdt tiden med tanke på alle aktiviteter som tilbys på slike ferjer. Hvis tid ikke er et problem og du sikter på en minneverdig tur og reisevei så er ferje valget for deg!</p>
+                <img class="reise-bilde" src="Bilder/ferry.jpg" alt="">
+                <p>Hvis du allerede har kommet deg over til USA og sikter på å komme deg til Los Angeles så tilbyr de fleste stater utleie av biler som kan være akkurat det du leter etter! Veien fra de fleste stater til Los Angeles tilbyr utrolige utsikter, fine veier og mange atraksjoner på veien. Dette er valget for dem som elsker å kjøre eller ønsker en fantastisk road trip med gode venner eller familien. Alt fra Sportsbiler til stasjonsvogner er tilgjengelige i de fleste bilutleietjenestene i USA.</p>
+                <img class="reise-bilde" src="Bilder/car.jpg" alt="">
+                <p>Hvis du ikke ønsker å kjøre selv, men fortsatt vil se utsikten på roadtripen så er det mulig å finne UBER-sjåfører som er tilgjengelige helt til Los Angeles. Dette kan fort bli dyrt så i vår anbefaling så kan dette være noe å unngå. Men har du pengene og lysten til å bruke Uber helt til Los Angeles så er det bare å gjøre det!</p>
+                <img class="reise-bilde" src="Bilder/uber.jpg" alt="">
+                <p>Hvis du vil spare litt penger, sitte tibake og bare nyte utsikten så er buss den perfekte løsningen for deg. Hvis du ikke har noe mot en litt lengre reisetid og offentligheten så er buss en av de mere avslappende valgene for deg. Men igjen så må du allerede være i USA for at dette skal være en valgmulighet for deg. Det tilbys buss turer til Los Angeles fra de aller fleste stater i USA. Om det ikke er direkte så kan vi garantere at du finner noe som stopper i andre stater og kan bytte derifra. </p>
+                <img class="reise-bilde" src="Bilder/bus.jpg" alt="">
+
+            </div>
+
+        </div>
+
+       
+
+
+    </div>
+
+
+    <footer id="footer">
+        <div id="footer-left">
+            <img src="BIlder/logo2.png" alt="">
+            
+        </div>
+        <ul id="footer-right">
+            <li>
+                <h2>Kontakt oss</h2>
+                <ul id="box">
+                    <li><a href="#">alexao2507@osloskolen.no</a></li>
+                    <li><a href="#">+47 476 72 818</a></li>
+                </ul>
+            </li>
+            <li>
+                <h2>Adresse</h2>
+
+                <ul id="box">
+                    <li><a href="#">Fyrstikkalléen 21</a></li>
+                    <li><a href="#">0661 Oslo</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div id="footer-bottom">
+            <p>All Right reserved by &copy;visit.losangeles 2021</p>
+        </div>
+
+    </footer>
+
+
+
+    <script>
+        //skaper en funksjon for å kunne åpne menyen når skjermen er minder enn 1200px
+        function hide(){
+            const list = document.getElementById("meny")
+            const x = document.getElementById("meny-x")
+            if (list.style.display === "grid") {
+                list.style.display = "";
+                x.style.display = "";
+            } else {
+                list.style.display = "grid";
+            }
+        }
+        //skaper en funksjon for å kunne lukke menyen når skjermen er minder enn 1200px
+        function show(){
+            const list = document.getElementById("meny")
+            const x = document.getElementById("meny-x")
+            if (list.style.display === "") {
+                list.style.display = "grid";
+                x.style.display = "grid";
+            } else {
+                list.style.display = "";
+            }
+        }
+    </script>
+</body>
+</html>

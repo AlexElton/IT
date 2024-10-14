@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resturanter</title>
+    <link rel="stylesheet" href="resturanter-style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Staatliches&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="grid-container">
+        
+        <div class="header">
+            <div class="logo">
+                <button id='meny-knapp' onclick="show()"><img src="Bilder/streker.png" alt="" width="50px"></button>
+                <img src="Bilder/logo2.png" alt="" id='logo-bilde'>
+            </div>
+            <div id="meny">
+                <ul>
+                    <button id='meny-x' onclick="hide()">X</button>
+                    <li class="active"><a href="index.html">Los Angeles</a></li>
+                    <li><a href="hotel.html">Hotell</a></li>
+                    <li><a href="resturanter.html">Restauranter</a></li>
+                    <li><a href="reisevei.html">Reisevei</a></li>
+                    <li><a href="login.html">Login</a></li>
+                
+                </ul>
+            </div>
+
+            </div>
+            <div class="informasjon">
+                <div id="info-header">
+                    <h1>RESTAURANTER</h1>
+                </div>
+                
+                <div id="resturant-1">
+                    <h1>The Palm</h1>
+                    <p>Flernivå Palm Los Angeles ligger i en historisk lekefabrikk i South Park i sentrum. Beliggenheten bare et kvartal fra Staples Center og Los Angeles Convention Center gjør det til det perfekte stedet å starte en spennende kveld. Med lag fra NBA, NFL og NHL som naboer, liker restauranten ofte besøk fra slike som Magic Johnson og Luc Robitaille. Disse sportslegendene, sammen med kjendiser og fremtredende lokalbefolkningen, er noen av The Palms største fans og faste gjester.
+                        Her blir det tilbudt de mest eksklusive rettene og de deiligste måltidene man kan ønske i sitt besøk i LA.
+                    </p>
+                </div>
+                <div id="bilde1">
+                    
+                </div>
+                <div id="resturant-2">
+                    <h1>Bestia</h1>
+                    <p>Konseptet for Bestia sidestiller dekorative samtidselementer mot et rå, industrielt rom dryppende av karakter. Denne tilnærmingen hyller sofistikerte moderne italienske rom, som ofte integrerer moderne interiør i århundrer gamle strukturer. Sterke, tradisjonelle byggematerialer som fliser, stål, marmor og tre gir også pop i festlig farge. Navnet Bestia (italiensk for "Beast") ekko gjennom hele plassen via harde kanter av designelementer, for eksempel veggbekledningens mønster av bar-kampvåpen, skremmende lysekroner med kjøttkrok hengende fra høye stålspor og baderomsfliser som leser som uferdig. Den gjentatte bruken av chevron- og sekskantede mønstre, tulipanhengebelysning, varme gule toner og luftige sitteplasser hjelper til med å myke det aggressivt industrielle rommet med litt innfall. De særegne bodene, konstruert og bygget av District Millworks, har seter som ser ut til å trosse tyngdekraften. En rå kobberstang gir et lerret som vil skifte seg hele livet, ettersom det gjenspeiler håndverket med å lage håndverkscocktailer.
+                    </p>
+                </div>
+                <div id="bilde2">
+                    
+                </div>
+                <div id="resturant-3">
+                    <h1>Republique</h1>
+                    <p>République, som ligger i midten av byen, eies av kokk Walter Manzke og kokk Margarita Manzke. Sentrert i hjertet av Los Angeles ble den klassiske bygningen den ligger opprinnelig oppført i 1929 av Charlie Chaplin, og senere forvandlet til det ikoniske La Brea Bakery and Campanile Restaurant. République bygger på denne fortidige fortiden og tilbyr et gastronomisk miljø gjennomsyret av historie og storhet. Plassen har en uformell bar og bistro foran med en mer formell spiseplass plassert bak, og serverer en franskinspirert meny laget daglig av våre kokker.
+
+                    </p>
+                </div>
+                <div id="bilde3">
+                    
+                </div>
+                <div id="resturant-4">
+                    <h1>Redbird</h1>
+                    <p>Redbird ligger i sentrum av Los Angeles, og er hugget inn i en av byens mest historiske arkitektoniske perler, inne i den tidligere prestegårdsbygningen i Vibiana - det katedral-omdannede arrangementet som også eies og drives av Frasers. Designer Robert Weimer og Amy Knoll Fraser skapte et dynamisk rom som hyller katedralen ved siden av og den eksisterende tidløse arkitekturen ved å sette inn enkle moderne former for å utfylle i stedet for å innhente romfølelsen. Resultatet er en varm og komfortabel plass.
+                        <br> “At Redbird you flit through the epochs, alighting here or there but always feeling grounded in the present”
+                        Patric Kuh — Los Angeles Magazine
+                    </p>
+                </div>
+                <div id="bilde4">
+                    
+                </div>
+            </div>
+
+        </div>
+
+       
+
+
+    </div>
+
+
+
+
+    <script>
+        //skaper en funksjon for å kunne åpne menyen når skjermen er minder enn 1200px
+        function hide(){
+            const list = document.getElementById("meny")
+            const x = document.getElementById("meny-x")
+            if (list.style.display === "grid") {
+                list.style.display = "";
+                x.style.display = "";
+            } else {
+                list.style.display = "grid";
+            }
+        }
+        //skaper en funksjon for å kunne lukke menyen når skjermen er minder enn 1200px
+        function show(){
+            const list = document.getElementById("meny")
+            const x = document.getElementById("meny-x")
+            if (list.style.display === "") {
+                list.style.display = "grid";
+                x.style.display = "grid";
+            } else {
+                list.style.display = "";
+            }
+        }
+    </script>
+</body>
+</html>

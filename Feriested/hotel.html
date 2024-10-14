@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotell</title>
+    <link rel="stylesheet" href="hotel-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Staatliches&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div id="grid-container">
+        
+        <div class="header">
+            <div class="logo">
+                <button id='meny-knapp' onclick="show()"><img src="Bilder/streker.png" alt="" width="50px"></button>
+                <img src="Bilder/logo2.png" alt="" id='logo-bilde'>
+            </div>
+            <div id="meny">
+                <ul>
+                    <button id='meny-x' onclick="hide()">X</button>
+                    <li class="active"><a href="index.html">Los Angeles</a></li>
+                    <li><a href="hotel.html">Hotell</a></li>
+                    <li><a href="resturanter.html">Restauranter</a></li>
+                    <li><a href="reisevei.html">Reisevei</a></li>
+                    <li><a href="login.html">Login</a></li>
+                
+                </ul>
+            </div>
+
+        </div>
+        
+        <div id="hotell-header">
+            <h1>HOTELL</h1>
+            <p>Her i Los Angeles er de beste valgmulighetene for overnattingssteder i hele USA! Her virker 5 stjerners hoteller som 7 stjerners hoteller, og har de beste servicene en kan ønske i sitt besøk i LA. Hotellene ligger alle i nærheten av atraksjoner og du finner nye eventyr rett utenfor døren din. Her er noen av de best utvalgte hotellene i LA:</p>
+        </div>
+        <div id="hotell-bilder">
+            <div class="item">
+                <img class="bilder" src="Bilder/Chateu copy.jpg" alt="">
+                <span class="caption">Chateu Marmont Hotel</span>
+            </div>
+            <div class="item">
+                <img class="bilder" src="Bilder/Sunset Tower copy.jpg" alt="">
+                <span class="caption">Sunset Tower Hotel</span>
+            </div>
+            <div class="item">
+                <img class="bilder" src="Bilder/HotellBel-air.jpg" alt="">
+                <span class="caption">Hotel Bel-Air</span>
+            </div>
+            <div class="item">
+                <img class="bilder" src="Bilder/BeveryHillsHotel.jpg" alt="">
+                <span class="caption">The Beverly Hills Hotel</span>
+            </div>
+            <div class="item">
+                <img class="bilder" src="Bilder/Mr. C Beverly.jpg" alt="">
+                <span class="caption">Mr. C Beverly Hotel</span>
+            </div>
+            <div class="item">
+                <img class="bilder" src="Bilder/Peninsula.jpg" alt="">
+                <span class="caption">The Peninsula Beverly Hills</span>
+            </div>
+            <div class="item">
+                <img class="bilder" src="Bilder/Videroy Hotel.jpg" alt="">
+                <span class="caption">Viceroy L’ermitage Beverly Hills</span>
+            </div>
+            <div class="item">
+                <img class="bilder" src="Bilder/TheStandard.jpg" alt="">
+                <span class="caption">The Standard, Hollywood </span>
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer id="footer">
+        <div id="footer-left">
+            <img src="BIlder/logo2.png" alt="">
+            
+        </div>
+        <ul id="footer-right">
+            <li>
+                <h2>Kontakt oss</h2>
+                <ul id="box">
+                    <li><a href="#">alexao2507@osloskolen.no</a></li>
+                    <li><a href="#">+47 476 72 818</a></li>
+                </ul>
+            </li>
+            <li>
+                <h2>Adresse</h2>
+
+                <ul id="box">
+                    <li><a href="#">Fyrstikkalléen 21</a></li>
+                    <li><a href="#">0661 Oslo</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div id="footer-bottom">
+            <p>All Right reserved by &copy;visit.losangeles 2021</p>
+        </div>
+
+    </footer>
+
+
+    <script>
+        //skaper en funksjon for å kunne åpne menyen når skjermen er minder enn 1200px
+        function hide(){
+            const list = document.getElementById("meny")
+            const x = document.getElementById("meny-x")
+            if (list.style.display === "grid") {
+                list.style.display = "";
+                x.style.display = "";
+            } else {
+                list.style.display = "grid";
+            }
+        }
+       //skaper en funksjon for å kunne lukke menyen når skjermen er minder enn 1200px        
+        function show(){
+            const list = document.getElementById("meny")
+            const x = document.getElementById("meny-x")
+            if (list.style.display === "") {
+                list.style.display = "grid";
+                x.style.display = "grid";
+            } else {
+                list.style.display = "";
+            }
+        }
+    </script>
+</body>
+</html>

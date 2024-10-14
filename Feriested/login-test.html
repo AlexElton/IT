@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login-test-style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="grid-container">
+        
+        <div class="header">
+            <div class="logo">
+                <button id='meny-knapp' onclick="show()"><img src="Bilder/streker.png" alt="" width="50px"></button>
+                <img src="Bilder/logo2.png" alt="" id='logo-bilde'>
+            </div>
+            <div id="meny">
+                <ul>
+                    <button id='meny-x' onclick="hide()">X</button>
+                    <li class="active"><a href="index.html">Los Angeles</a></li>
+                    <li><a href="hotel.html">Hotell</a></li>
+                    <li><a href="resturanter.html">Restauranter</a></li>
+                    <li><a href="reisevei.html">Reisevei</a></li>
+                    <li><a href="login.html">Login</a></li>
+                
+                </ul>
+            </div>
+
+        </div>
+
+        
+    </div>
+
+<div class="loginbox">
+
+
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <form action="#">
+                <h1>Lag Konto</h1>
+                <div class="social-container">
+                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <span>eller bruk email for registrering</span>
+                <input type="text" placeholder="Name" />
+                <input type="email" placeholder="Email" />
+                <input type="password" placeholder="Password" />
+                <button>Registrer</button>
+            </form>
+        </div>
+        <div class="form-container sign-in-container">
+            <form action="#">
+                <h1>Logg Inn</h1>
+                <div class="social-container">
+                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <span>eller bruk din konto</span>
+                <input type="email" placeholder="Email" />
+                <input type="password" placeholder="Password" />
+                <a href="#">Glemt passord?</a>
+                <button>Logg Inn</button>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Velkommen tilbake!</h1>
+                    <p> For å holde kontakten med oss, vennligst logg inn med din personlige informasjon</p>
+                    <button class="ghost" id="signIn">Logg Inn</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Hei, nykommer!</h1>
+                    <p>Skriv inn dine personlige opplysninger og start reisen med oss</p>
+                    <button class="ghost" id="signUp">Registrer deg</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+<!-- 
+
+    <footer>
+        <p>
+            Created with <i class="fa fa-heart"></i> by
+            <a target="_blank" href="https://florin-pop.com">Florin Pop</a>
+            - Read how I created this and how you can join the challenge
+            <a target="_blank" href="https://www.florin-pop.com/blog/2019/03/double-slider-sign-in-up-form/">here</a>.
+        </p>
+    </footer>
+
+
+-->    
+
+</div>
+    
+
+<script>
+
+function hide(){
+            const list = document.getElementById("meny")
+            const x = document.getElementById("meny-x")
+            if (list.style.display === "grid") {
+                list.style.display = "";
+                x.style.display = "";
+            } else {
+                list.style.display = "grid";
+            }
+        }
+        function show(){
+            const list = document.getElementById("meny")
+            const x = document.getElementById("meny-x")
+            if (list.style.display === "") {
+                list.style.display = "grid";
+                x.style.display = "grid";
+            } else {
+                list.style.display = "";
+            }
+        }
+
+
+const signUpButton = document.getElementById('signUp');
+const signInButton = document.getElementById('signIn');
+const container = document.getElementById('container');
+
+signUpButton.addEventListener('click', () => {
+	container.classList.add("right-panel-active");
+});
+
+signInButton.addEventListener('click', () => {
+	container.classList.remove("right-panel-active");
+});
+
+</script>
+
+
+</body>
+</html>

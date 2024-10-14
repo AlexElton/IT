@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Los Angeles</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Staatliches&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="grid-container">
+        
+        <div class="header">
+            <div class="logo">
+                <button id='meny-knapp' onclick="show()"><img src="Bilder/streker.png" alt="" width="50px"></button>
+                <img src="Bilder/logo2.png" alt="" id='logo-bilde'>
+            </div>
+            <div id="meny">
+                <ul>
+                    <button id='meny-x' onclick="hide()">X</button>
+                    <li class="active"><a href="index.html">Los Angeles</a></li>
+                    <li><a href="hotel.html">Hotell</a></li>
+                    <li><a href="resturanter.html">Restauranter</a></li>
+                    <li><a href="reisevei.html">Reisevei</a></li>
+                    <li><a href="login.html">Login</a></li>
+                
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="intro-tekst">
+            <h1>
+                Los Angeles
+            </h1>
+        </div>
+        
+        <div class="fun-fact-tekst">
+            <h1>Fun Fact!</h1>
+            <p>Los Angeles er en av de mest energirike statene i USA. Det orginale navnet til Los Angeles er El Pueblo de Nuestra Señora Reina de Los Ángeles Sobre el Río Porciúncula etter å ha blitt grunnlagt i 1781. Opplevelsene en kan få her er noe av det beste. Tilbyr alt fra stand-miljø, til haiking i fjell til shopping i storbyen. Hvis du søker eventyr og minneverdige opplevelser, besøk LA! </p>
+        </div>
+
+        
+        
+        
+        
+    </div>
+    
+    
+    <div id="bilde-2">
+        <h1>LA</h1>
+        <p>Los Agneles, staten med de fleste mulighetene for de beste opplevelsene. </p>
+    </div>
+
+    <div class="fun-fact-tekst">
+        <h1>Hva kan du forvente?</h1>
+        <p>I Los Angeles kan du forbrede deg på det deiligste været, de fineste bygningene, de hyggligste folka og noen av de beste opplevelsene man kan få! Her er det ingen begrensninger på aktiviteter man kan gjøre. Fallskjermhopping, surfing, bading, hiking og mye mer! </p>
+    </div>
+
+    <div id="bilde-3">
+        <h1>FRIHETENS STAT</h1>
+        <p>Los Agneles, staten med de fleste mulighetene for de beste opplevelsene. </p>
+    </div>
+
+    <footer id="footer">
+        <div id="footer-left">
+            <img src="BIlder/logo2.png" alt="">
+            
+        </div>
+        <ul id="footer-right">
+            <li>
+                <h2>Kontakt oss</h2>
+                <ul id="box">
+                    <li><a href="#">alexao2507@osloskolen.no</a></li>
+                    <li><a href="#">+47 476 72 818</a></li>
+                </ul>
+            </li>
+            <li>
+                <h2>Adresse</h2>
+
+                <ul id="box">
+                    <li><a href="#">Fyrstikkalléen 21</a></li>
+                    <li><a href="#">0661 Oslo</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div id="footer-bottom">
+            <p>All Right reserved by &copy;visit.losangeles 2021</p>
+        </div>
+
+    </footer>
+
+
+    <script>
+        //skaper en funksjon for å kunne åpne menyen når skjermen er minder enn 1200px
+        function hide(){
+            const list = document.getElementById("meny")
+            const x = document.getElementById("meny-x")
+            if (list.style.display === "grid") {
+                list.style.display = "";
+                x.style.display = "";
+            } else {
+                list.style.display = "grid";
+            }
+        }
+        //skaper en funksjon for å kunne lukke menyen når skjermen er minder enn 1200px
+        function show(){
+            const list = document.getElementById("meny")
+            const x = document.getElementById("meny-x")
+            if (list.style.display === "") {
+                list.style.display = "grid";
+                x.style.display = "grid";
+            } else {
+                list.style.display = "";
+            }
+        }
+    </script>
+</body>
+</html>
